@@ -10,8 +10,7 @@ public class GameBoard extends JFrame {
     GameBoard() {
 
 
-
-        this.add(new GamePanel());
+        this.add(GamePanel());
         this.setTitle("Knights,Elves,Dwarfs");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
@@ -19,6 +18,10 @@ public class GameBoard extends JFrame {
         this.setVisible(true);
         this.setLocation(300, 200);
 
+    }
+
+    private Component GamePanel() {
+        return null;
     }
 
 
@@ -29,12 +32,13 @@ public class GameBoard extends JFrame {
                     g.setColor(Color.BLACK);
                     g.drawRect(0, 0, 100, 100);
 
-                    GameTile tile=new GameTile(row,col);
+                    GameTile tile = new GameTile(row, col);
                     tile.render(g);
                 }
             }
         }
-    }
+
+}
 
 
 
